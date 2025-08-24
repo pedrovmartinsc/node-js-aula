@@ -41,33 +41,34 @@ const fs = require('fs');
 
 function criarCoisa(){
 
-fs.mkdir('C:/Users/User/OneDrive/Documentos/oiAqui', {recursive: true},
-    (erro) => {
+fs.mkdir('C:/Users/User/OneDrive/Documentos/oiAqui', {recursive: true}, (erro) => {
     if(erro){
         console.log(`Erro ao ler arquino: ${erro}`);
         return;
     };
 
-    console.log(`Diretório criado com sucesso`)
+    console.log(`Diretório criado com sucesso`);
 
 
-});
+
     fs.writeFile('C:/Users/User/OneDrive/Documentos/oiAqui/novoArquivo.txt', 'Oi, mundo', 'utf-8', (erro) => {
-            if(erro){
+        if(erro){
         console.log(`Erro ao ler diretório: ${erro}`);
         return;
     };
-        console.log(`Arquivo criado com sucesso`)
+        console.log(`Arquivo criado com sucesso`);
         
-        });
+        
 
-            fs.readFile('C:/Users/User/OneDrive/Documentos/oiAqui/novoArquivo.txt', 'utf-8', (erro, dado) => {
-            if(erro){
+        fs.readFile('C:/Users/User/OneDrive/Documentos/oiAqui/novoArquivo.txt', 'utf-8', (erro, dado) => {
+        if(erro){
         console.log(`Erro ao ler arquino: ${erro}`);
         return;
-    };
-        console.log(`Arquivo criado com sucesso: ${dado}`)
+        };
+        console.log(`O que está escrito: ${dado}`);
         
+    });
+    });
         });
 
 
@@ -75,4 +76,4 @@ fs.mkdir('C:/Users/User/OneDrive/Documentos/oiAqui', {recursive: true},
 
     }
 
-    criarCoisa()
+    criarCoisa();
